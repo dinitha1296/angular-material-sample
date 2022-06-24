@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'angular-material-sample';
+    sidenavOpened: boolean = false;
+
+    toggleSidenav(): void {
+        this.sidenavOpened = !this.sidenavOpened;
+    }
 }
