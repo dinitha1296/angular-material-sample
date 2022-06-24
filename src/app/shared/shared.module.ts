@@ -4,6 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TopNavigationComponent } from './top-navigation/top-navigation.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
 
@@ -17,7 +18,8 @@ import { SideNavigationComponent } from './side-navigation/side-navigation.compo
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSlideToggleModule
   ],
   exports: [
     TopNavigationComponent,

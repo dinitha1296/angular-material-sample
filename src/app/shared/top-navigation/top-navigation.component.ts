@@ -9,6 +9,8 @@ export class TopNavigationComponent implements OnInit {
 
   @Output() menuToggleChange: EventEmitter<void> = new EventEmitter<void>();
 
+  darkTheme: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +18,10 @@ export class TopNavigationComponent implements OnInit {
 
   toggleSideMenu(): void {
     this.menuToggleChange.emit();
+  }
+
+  toggleTheme(): void {
+    this.darkTheme = !this.darkTheme;
+    document.body.classList.toggle('dark-theme');
   }
 }
