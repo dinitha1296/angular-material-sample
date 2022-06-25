@@ -1,5 +1,6 @@
 $sidenav-section-padding: 0.7rem;
 $sidenav-section-width: 15rem;
+$sidenav-section-selected-background-color: rgba(255, 0, 0, 0.3);
 
 .sidenav-container {
     padding-top: 1rem;
@@ -26,4 +27,8 @@ $sidenav-section-width: 15rem;
 
 .sidenav-width {
     width: $sidenav-section-width;
+}
+
+.sidenav-section-selected {
+    background-color: $sidenav-section-selected-background-color !important;
 }

@@ -2,7 +2,7 @@
     <mat-sidenav mode="side" [opened]="sidenavOpened">
         <section class="blank-ends"></section>
         <mat-nav-list class="sidenav-width">
-            <a [routerLink]="route.path" *ngFor="let route of routes" class="sidenav-section mat-list-item">
+            <a [routerLink]="route.path" routerLinkActive="sidenav-section-selected" *ngFor="let route of routes" class="sidenav-section mat-list-item">
                 <span>{{route.name}}</span>
             </a>
         </mat-nav-list>
