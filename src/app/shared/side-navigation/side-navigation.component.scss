@@ -1,20 +1,29 @@
+$sidenav-section-padding: 0.7rem;
+$sidenav-section-width: 15rem;
+
 .sidenav-container {
-    // position: absolute
-    // top: 10px
-    // bottom: 10px
-    // left: 0
-    // right: 0
-    background: #eee;
     padding-top: 1rem;
     flex-grow: 1;
 }
 
 .sidenav-section {
-    display: flex;
+    display: flex !important;
     align-content: center;
     align-items: center;
-    height: 2.5rem;
-    width: 15rem;
-    padding-left: 1rem;
+    padding: $sidenav-section-padding;
+    width: $sidenav-section-width;
+    padding-left: 1rem !important;
     font-size: 1rem;
+}
+
+.blank-ends {
+    height: $sidenav-section-padding;
+}
+
+.no-text-decoration {
+    text-decoration: none;
+}
+
+.sidenav-width {
+    width: $sidenav-section-width;
 }

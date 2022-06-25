@@ -1,80 +1,12 @@
 <mat-sidenav-container class="sidenav-container mat-drawer-container mat-sidenav-container">
     <mat-sidenav mode="side" [opened]="sidenavOpened">
-        <section class="sidenav-section">
-            <span>Autocomplete</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Badge</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Button</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Button toggle</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Bottom Sheet</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Card</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Checkbox</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Chips</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Core</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Datepicker</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Dialog</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Divider</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Expansion Panel</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Form field</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Grid list</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Icon</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Input</span>
-        </section>
-        <section class="sidenav-section">
-            <span>List</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Menu</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Paginator</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Progress bar</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Progress spinner</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Radio button</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Ripples</span>
-        </section>
-        <section class="sidenav-section">
-            <span>Select</span>
-        </section>
+        <section class="blank-ends"></section>
+        <mat-nav-list class="sidenav-width">
+            <a [routerLink]="route.path" *ngFor="let route of routes" class="sidenav-section mat-list-item">
+                <span>{{route.name}}</span>
+            </a>
+        </mat-nav-list>
+        <section class="blank-ends"></section>
     </mat-sidenav>
     <mat-sidenav-content>
         <ng-content></ng-content>
