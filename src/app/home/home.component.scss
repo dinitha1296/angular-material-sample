@@ -1,3 +1,55 @@
+$component-card-width: 16rem;
+$component-card-side-margin: 0.6rem;
+$component-card-description-vertical-padding: 0.8rem;
+
 .home-banner {
     text-align: center;
+}
+
+.documentation-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.documentation-link:hover {
+    text-decoration: underline;
+}
+
+.component-card-container {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.component-card {
+    width: $component-card-width;
+    padding: 0rem;
+}
+
+.component-card-img {
+    width: $component-card-width;
+}
+
+.component-card-text {
+    padding-left: $component-card-side-margin;
+    padding-right: $component-card-side-margin;
+}
+
+.component-card-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.component-card-description {
+    margin: 0 !important;
+    padding: 0;
+    font-size: 0.9rem;
+    padding-top: $component-card-description-vertical-padding;
+    padding-bottom: $component-card-description-vertical-padding;
+    line-height: 1.3rem;
+    min-height: 2.6rem;
 }

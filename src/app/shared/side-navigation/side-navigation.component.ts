@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Route } from 'src/app/core/models/route.model';
 
 @Component({
   selector: 'app-side-navigation',
@@ -9,7 +10,7 @@ export class SideNavigationComponent implements OnInit {
 
   @Input() sidenavOpened!: boolean;
 
-  routes: route[] = [
+  routes: Route[] = [
     { name: 'Autocomplete', path: '/autocomplete' },
     { name: 'Badge', path: '/badge' },
     { name: 'Bottom Sheet', path: '/bottom-sheet' },
@@ -53,9 +54,4 @@ export class SideNavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-}
-
-interface route {
-  name: string,
-  path?: string
 }

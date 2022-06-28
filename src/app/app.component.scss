@@ -1,9 +1,6 @@
+$top-nav-height: 64px;
+
 .tp-container {
-    // position: absolute
-    // top: 10px
-    // bottom: 10px
-    // left: 0
-    // right: 0
     background: #eee;
     padding-top: 1rem;
 }
@@ -20,4 +17,21 @@
 
 .spacer {
     flex: 1 1 auto;
+}
+
+.top-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2 !important;
+    box-shadow: 0 6px 10px #00000024,0 1px 18px #0000001f;
+    width: 100%;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    position: fixed;
+    top: $top-nav-height;
+    height: calc(100vh - $top-nav-height);
 }

@@ -1,9 +1,8 @@
 $sidenav-section-padding: 0.7rem;
 $sidenav-section-width: 15rem;
-$sidenav-section-selected-background-color: rgba(255, 0, 0, 0.3);
+$sidenav-section-selected-background-color: #f44336;;
 
 .sidenav-container {
-    padding-top: 1rem;
     flex-grow: 1;
 }
 
@@ -11,14 +10,10 @@ $sidenav-section-selected-background-color: rgba(255, 0, 0, 0.3);
     display: flex !important;
     align-content: center;
     align-items: center;
-    padding: $sidenav-section-padding;
     width: $sidenav-section-width;
-    padding-left: 1rem !important;
+    padding-top: $sidenav-section-padding;
+    padding-bottom: $sidenav-section-padding;
     font-size: 1rem;
-}
-
-.blank-ends {
-    height: $sidenav-section-padding;
 }
 
 .no-text-decoration {
@@ -31,4 +26,5 @@ $sidenav-section-selected-background-color: rgba(255, 0, 0, 0.3);
 
 .sidenav-section-selected {
     background-color: $sidenav-section-selected-background-color !important;
+    color: white;
 }
