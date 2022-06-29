@@ -1,0 +1,37 @@
+<div class="mat-primary" [ngStyle]="{'width': '100%', 'padding': '2rem'}">
+  <h1>Autocomplete</h1>
+  <p>The autocomplete is a normal text input enhanced by a panel of suggested options.</p>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Number</mat-label>
+      <input 
+        type="text"
+        placeholder="Pick one"
+        aria-label="Number"
+        matInput
+        [matAutocomplete]="numberAutocomplete"
+        [formControl]="numberControl">
+      <mat-autocomplete #numberAutocomplete="matAutocomplete">
+        <mat-option *ngFor="let number of filteredNumbers | async" [value]="number">{{number}}</mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>State</mat-label>
+      <input 
+        type="text"
+        placeholder="Pick one"
+        aria-label="State"
+        matInput
+        [matAutocomplete]="stateAutocomplete"
+        [formControl]="stateControl">
+      <mat-autocomplete #stateAutocomplete="matAutocomplete">
+        <mat-optgroup *ngFor="let group of filteredStateGroups | async" [label]="group.letter">
+          <mat-option class="state-option" *ngFor="let state of group.states" [value]="state.name">
+            <img class="state-option-img" [src]="state.flagURL" height="25">
+            <span>{{state.name}} | <small>Population: {{state.population | magnitude}}</small></span>
+          </mat-option>
+        </mat-optgroup>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>

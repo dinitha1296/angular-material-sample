@@ -34,4 +34,5 @@ $top-nav-height: 64px;
     position: fixed;
     top: $top-nav-height;
     height: calc(100vh - $top-nav-height);
+    width: 100%;
 }
