@@ -1,0 +1,19 @@
+<div class="home-banner mat-primary" [ngStyle]="{'background-color': '#f44336', 'color': 'white', 'padding': '3rem'}">
+  <h1 [ngStyle]="{'padding-top': '1rem', 'font-size': '3rem'}">Angular Material Sample</h1>
+  <h2 [ngStyle]="{'margin-top': '3rem'}">Sample web application for demonstrating Angular Material components</h2>
+  <a class="documentation-link" href="https://material.angular.io/" target="_blank">
+      <span>See documentation</span>
+      <mat-icon [ngStyle]="{'font-size': '0.9rem'}">open_in_new</mat-icon>
+  </a>
+</div>
+<mat-nav-list class="component-card-container">
+  <a [ngStyle]="{'margin': '1rem'}" *ngFor="let route of routes" [routerLink]="route.path">
+      <mat-card class="component-card">
+          <img class="component-card-img" [src]="route.imageURL" mat-card-content>
+          <div class="component-card-text">
+              <mat-card-title class="component-card-title">{{route.name}}</mat-card-title>
+              <mat-card-content class="component-card-description">{{route.description}}</mat-card-content>
+          </div>
+      </mat-card>
+  </a>
+</mat-nav-list>

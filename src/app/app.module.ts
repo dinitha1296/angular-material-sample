@@ -9,7 +9,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon'
-import { SharedModule } from './shared/shared.module'
+import { LayoutModule } from './layout/layout.module'
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { SharedModule } from './shared/shared.module'
     MatCardModule,
     MatSidenavModule,
     MatIconModule,
-    SharedModule
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
