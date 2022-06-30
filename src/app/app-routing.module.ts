@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./autocomplete/autocomplete.module').then(m => m.AutocompleteModule)
   },
   {
+    path: 'badge',
+    loadChildren: () => import('./badge/badge.module').then(m => m.BadgeModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }

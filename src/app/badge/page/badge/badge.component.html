@@ -1,0 +1,27 @@
+<div [ngStyle]="{'padding': '2rem'}">
+  <h1>Badge</h1>
+  <p>Badges are small status descriptors for UI elements. A badge consists of a small circle, typically containing a number or other short set of characters, that appears in proximity to another object.</p>
+  <div [ngStyle]="{'text-align': 'center', 'margin': '2rem'}">
+    <p><span matBadge="1" matBadgeSize="small">Text with a small overlapping badge</span></p>
+    <p><span matBadge="1" matBadgeSize="small" matBadgeOverlap="false">Text with a small non-overlapping badge</span></p>
+    <p><span matBadge="2">Text with a normal overlapping badge</span></p>
+    <p><span matBadge="2" matBadgeOverlap="false">Text with a normal non-overlapping badge</span></p>
+    <p><span matBadge="3" matBadgeSize="large">Text with a large overlapping badge</span></p>
+    <p><span matBadge="3" matBadgeSize="large" matBadgeOverlap="false">Text with a large non-overlapping badge</span></p>
+    <p><span matBadge="B" matBadgePosition="below" matBadgeOverlap="false">Badge in the bottom</span></p>
+    <p><span matBadge="L" matBadgePosition="before" matBadgeOverlap="false">Badge in the left</span></p>
+    <p><button mat-raised-button matBadge="5">Button with a badge</button></p>
+    <p><button mat-raised-button matBadge="5" [matBadgeHidden]="!isBadgeVisible" (click)="toggleBadgeVisibility()">Click to toggle badge visibility</button></p>
+    <p><button mat-raised-button matBadge="5" [matBadgeDisabled]="isBadgeDisabled" (click)="toggleBadgeDisabled()">Click to toggle badge disabled</button></p>
+    <p>Icon with a badge: <mat-icon class="badge-icon" matBadge="6">home</mat-icon></p>
+    <p>Click to change badge value: 
+      <button class="side-padding" mat-mini-fab color="background" (click)="decreaseBadgeCount()" [disabled]="badgeCount <= 1">
+        <mat-icon>remove</mat-icon>
+      </button>
+      <mat-icon class="badge-icon" [matBadge]="badgeCount">notifications</mat-icon>
+      <button class="side-padding" mat-mini-fab color="background" (click)="increaseBadgeCount()" [disabled]="badgeCount >= 10">
+        <mat-icon>add</mat-icon>
+      </button>
+    </p>
+  </div>
+</div>
