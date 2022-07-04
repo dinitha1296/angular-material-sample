@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatListModule } from '@angular/material/list';
+import { ThemeServiceModule } from '../core/theme-service/theme-service.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatListModule
+    MatListModule,
+    ThemeServiceModule
   ],
   exports: [
     TopNavigationComponent,

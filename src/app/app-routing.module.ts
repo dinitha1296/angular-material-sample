@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./badge/badge.module').then(m => m.BadgeModule)
   },
   {
+    path: 'bottom-sheet',
+    loadChildren: () => import('./bottom-sheet/bottom-sheet.module').then(m => m.BottomSheetModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }

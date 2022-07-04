@@ -7,7 +7,7 @@
     <a routerLink="/">Angular Material Sample</a>
   </mat-nav-list>
   <span class="spacer"></span>
-  <mat-icon class="m-c-1" [ngClass]="{'yellow': !darkTheme}">light_mode</mat-icon>
-  <mat-slide-toggle [checked]="darkTheme" (change)="toggleTheme()"></mat-slide-toggle>
-  <mat-icon class="m-c-1" [ngClass]="{'light-blue': darkTheme}">dark_mode</mat-icon>
+  <mat-icon class="m-c-1" [ngClass]="{'yellow': !(darkTheme | async)}">light_mode</mat-icon>
+  <mat-slide-toggle [checked]="darkTheme | async" (change)="toggleTheme()"></mat-slide-toggle>
+  <mat-icon class="m-c-1" [ngClass]="{'grey': darkTheme | async}">dark_mode</mat-icon>
 </mat-toolbar>

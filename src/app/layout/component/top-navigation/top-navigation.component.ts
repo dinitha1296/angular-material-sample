@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ThemeService } from '../../../core/theme-service/service';
 
 @Component({
   selector: 'app-top-navigation',
@@ -9,11 +11,14 @@ export class TopNavigationComponent implements OnInit {
 
   @Output() menuToggleChange: EventEmitter<void> = new EventEmitter<void>();
 
-  darkTheme: boolean = false;
+  darkTheme!: Observable<boolean>;
 
-  constructor() { }
+  constructor(
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit(): void {
+    this.darkTheme = this.themeService.getDarkThemeState();
   }
 
   toggleSideMenu(): void {
@@ -21,7 +26,6 @@ export class TopNavigationComponent implements OnInit {
   }
 
   toggleTheme(): void {
-    this.darkTheme = !this.darkTheme;
-    document.body.classList.toggle('dark-theme');
+    this.themeService.toggleThemeState();
   }
 }
