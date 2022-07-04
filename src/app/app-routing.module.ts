@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./bottom-sheet/bottom-sheet.module').then(m => m.BottomSheetModule)
   },
   {
+    path: 'button',
+    loadChildren: () => import('./button/button.module').then(m => m.ButtonModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }
