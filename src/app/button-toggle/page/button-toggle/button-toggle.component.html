@@ -1,0 +1,53 @@
+<div class="main-text">
+  <h1>Button Toggle</h1>
+  <p>&lt;mat-button-toggle&gt; are on/off toggles with the appearance of a button. These toggles can be configured to behave as either radio-buttons or checkboxes. While they can be standalone, they are typically part of a mat-button-toggle-group.</p>
+  <div class="button-toggle-sample-section">
+    <div class="button-toggle-sample-section-label margin-vertical-1">
+      <span>Change arrow direction: </span>
+    </div>
+    <div class="toggle-button-container">
+      <mat-button-toggle-group [formControl]="arrowDirectionControl">
+        <mat-button-toggle value="upward">Up</mat-button-toggle>
+        <mat-button-toggle value="downward">Down</mat-button-toggle>
+        <mat-button-toggle value="backward">Left</mat-button-toggle>
+        <mat-button-toggle value="forward">Right</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="margin-vertical-1">
+      <mat-icon>arrow_{{arrowDirection}}</mat-icon>
+    </div>
+  </div>
+  <div class="button-toggle-sample-section">
+    <div class="button-toggle-sample-section-label margin-vertical-1">
+      <span>Change font style: </span>
+    </div>
+    <div class="toggle-button-container">
+      <mat-button-toggle-group [formControl]="fontStyleControl" multiple>
+        <mat-button-toggle value="bold">Bold</mat-button-toggle>
+        <mat-button-toggle value="italic">Italic</mat-button-toggle>
+        <mat-button-toggle value="underline">Underline</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div [class]="'margin-vertical-1 font-style-result-container ' + fontStyleClasses">
+      <span [ngClass]="{
+        'bold': fontStyleControl.value === 'bold', 
+        'italic': fontStyleControl.value === 'italic', 
+        'underline': fontStyleControl.value === 'underline'
+      }"
+      >Smaple Text</span>
+    </div>
+  </div>
+  <div class="button-toggle-sample-section">
+    <div class="button-toggle-sample-section-label margin-vertical-1">
+      <span>Mix colors: </span>
+    </div>
+    <div class="toggle-button-container">
+      <mat-button-toggle-group [formControl]="colorMixControl" multiple>
+        <mat-button-toggle value="red">Red</mat-button-toggle>
+        <mat-button-toggle value="green">Green</mat-button-toggle>
+        <mat-button-toggle value="blue">Blue</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="color-mix-result-circle margin-vertical-1" [ngStyle]="{'background-color': mixedColor}"></div>
+  </div>
+</div>

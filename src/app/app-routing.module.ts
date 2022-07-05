@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./button/button.module').then(m => m.ButtonModule)
   },
   {
+    path: 'button-toggle',
+    loadChildren: () => import('./button-toggle/button-toggle.module').then(m => m.ButtonToggleModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }
