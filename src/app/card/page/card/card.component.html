@@ -1,0 +1,37 @@
+<div class="main-text">
+  <h1>Card</h1>
+  <p>&lt;mat-card&gt; is a content container for text, photos, and actions in the context of a single subject.</p>
+  <div class="card-section">
+    <mat-card>
+      <mat-card-title>Post</mat-card-title>
+      <mat-card-subtitle>2015-05-12</mat-card-subtitle>
+      <mat-card-content>This is a sample post.</mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Like</button>
+        <button mat-button>Share</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Another Post</mat-card-title>
+      <mat-card-subtitle>Yesterday at 15:03</mat-card-subtitle>
+      <mat-card-content>This is also a sample post.</mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button>Like</button>
+        <button mat-button>Share</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="card-profile-image"></div>
+        <mat-card-title [ngStyle]="{'margin-top': 0}">Apple</mat-card-title>
+        <mat-card-subtitle>Yesterday at 08:03</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>Our new headquaters.</mat-card-content>
+      <img src="../../../../assets/images/apple/apple-headquarters.jpg" mat-card-image>
+      <mat-card-actions align="end">
+        <button mat-button>Like</button>
+        <button mat-button>Share</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

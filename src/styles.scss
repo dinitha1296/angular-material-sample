@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+$main-text-padding-vertical: 2.5rem;
+$main-text-padding-horizontal: 1.5rem;
+
 body {
     margin: 0;
     height: 100vh;
@@ -22,10 +25,13 @@ h1, h2 {
 }
 
 .main-text {
-    padding: 3rem;
+    padding-top: $main-text-padding-vertical;
+    padding-bottom: $main-text-padding-vertical;
+    padding-left: $main-text-padding-horizontal;
+    padding-right: $main-text-padding-horizontal;
     max-width: 800px;
     margin: auto;
     p {
-        line-height: 2.2rem;
+        line-height: 2rem;
     }
 }

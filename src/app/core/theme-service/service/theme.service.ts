@@ -6,7 +6,7 @@ import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 })
 export class ThemeService implements OnDestroy {
 
-  private _subject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private _subject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
   private _isDarkMode: boolean = false;
 
@@ -16,7 +16,15 @@ export class ThemeService implements OnDestroy {
 
   constructor() { 
     this._isDarkModeObservable = this._subject.asObservable();
-    this._subscriptions.push(this._isDarkModeObservable.subscribe(mode => this._isDarkMode = mode));
+    
+    this._subscriptions.push(this._isDarkModeObservable.subscribe(isDarkMode => {
+      this._isDarkMode = isDarkMode;
+      if (isDarkMode) {
+        document.body.classList.add('dark-theme');
+      } else {
+        document.body.classList.remove('dark-theme');
+      }
+    }));
   }
 
   getDarkThemeState(): Observable<boolean> {
@@ -24,7 +32,6 @@ export class ThemeService implements OnDestroy {
   }
 
   toggleThemeState(): void {
-    document.body.classList.toggle('dark-theme');
     this._subject.next(!this._isDarkMode);
   }
 

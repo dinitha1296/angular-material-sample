@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: () => import('./button-toggle/button-toggle.module').then(m => m.ButtonToggleModule)
   },
   {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then(m => m.CardModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   }
